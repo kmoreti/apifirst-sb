@@ -6,7 +6,7 @@ info:
   contact:
     name: Contact our support
     email: kleber.moreti.camargo@gmail.com
-    url: http://example.com/contact
+    url: http://springframework.guru/contact
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -19,11 +19,11 @@ info:
 
     # Introduction
 
-#tags:
+tags:
 #  - name: Echo
 #    description: "Example echo operations."
-#  - name: User
-#    description: "Example actions on user accounts."
+ - name: User
+   description: "Operations about users."
 #  - name: Admin
 #    description: "Example operations reserved for administrators."
 #  - name: Info
@@ -45,7 +45,7 @@ servers:
       tenant:
         default: www
         description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://springframework.guru/api/v1
 paths:
   '/users/{username}':
     $ref: 'paths/users_{username}.yaml'
