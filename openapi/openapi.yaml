@@ -16,16 +16,13 @@ info:
   description: >
     This is an **example** API to demonstrate features of the OpenAPI
     specification.
-
-    # Introduction
-
 tags:
  - name: Customer
-   description: Customer operations
- - name: User
-   description: Operations about users
+   description: Customer operations 
  - name: Product
    description: Product operations 
+ - name: Order
+   description: Order operations
 servers:
   - url: https://{tenant}/api/v1
     variables:
@@ -34,26 +31,18 @@ servers:
         description: Your tenant id
   - url: https://springframework.guru/api/v1
 paths:
-  '/users/{username}':
-    $ref: 'paths/users_{username}.yaml'
   '/v1/customers':
     $ref: 'paths/v1/customers.yaml'
-  '/v1/customers/{customer_id}':
-    $ref: 'paths/v1/customers_{customer_id}.yaml'
+  '/v1/customers/{customerId}':
+    $ref: 'paths/v1/customers_{customerId}.yaml'
   '/v1/products':
     $ref: 'paths/v1/products.yaml'
-  '/v1/products/{product_id}':
-    $ref: 'paths/v1/products_{product_id}.yaml'
-  # '/user':
-  #   $ref: 'paths/user.yaml'
-  # '/user/list':
-  #   $ref: 'paths/user-status.yaml'
-#  /pathItem:
-#    $ref: paths/pathItem.yaml
-#  /pathItemWithExamples:
-#    $ref: paths/pathItemWithExamples.yaml
-#  '/echo':
-#    $ref: 'paths/echo.yaml'
+  '/v1/products/{productId}':
+    $ref: 'paths/v1/products_{productId}.yaml'
+  '/v1/orders':
+    $ref: 'paths/v1/orders.yaml'
+  '/v1/orders/{orderId}':
+    $ref: 'paths/v1/orders_{orderId}.yaml'
 security: 
   -  basic_auth: []
 components:
@@ -75,21 +64,3 @@ components:
     basic_auth:
       type: http
       scheme: basic
-webhooks:
-  userInfo:
-    post:
-      summary: New user webhook
-      description: "Information about a new user in the system."
-      operationId: userInfo
-      tags:
-        - Info
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: 'components/schemas/User.yaml'
-      responses:
-        '200':
-          description: "Successfully retrieved information about a new user."
-      security:
-        - api_key: []

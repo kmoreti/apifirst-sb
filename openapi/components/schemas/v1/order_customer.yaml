@@ -5,7 +5,7 @@ properties:
     format: uuid
     description: "The unique identifier for the customer."    
   name:
-    $ref: name.yaml
+    $ref: name.yaml  
   shipToAddress:
     $ref: address.yaml
   billToAddress:
@@ -13,10 +13,9 @@ properties:
   email:
     type: string
     format: email
+    description: "The email address of the customer."
   phone:
     type: string
-  paymentMethods:
-    type: array
-    items: 
-      $ref: payment_method.yaml
-      
+    description: "The phone number of the customer." 
+  selectedPaymentMethod:
+    $ref: payment_method.yaml
