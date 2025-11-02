@@ -5,7 +5,7 @@ get:
   description: Get a single customer by its unique ID
   operationId: getCustomerById
   parameters:
-    - name: customer_id
+    - name: customerId
       in: path
       required: true
       description: The unique identifier of the customer

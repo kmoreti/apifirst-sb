@@ -1,0 +1,30 @@
+type: object
+properties: 
+  id:
+    type: string
+    format: uuid
+    description: "The unique identifier for the order."
+  customer:
+    $ref: order_customer.yaml
+  orderStatus:
+    type: string
+    description: "The status of the order."
+    enum:
+      - PENDING
+      - PROCESSING
+      - SHIPPED
+      - DELIVERED
+      - CANCELLED
+  orderLines:
+    type: array
+    description: "The order lines of the order."
+    items:
+      $ref: order_line.yaml
+  dateCreated:
+    type: string
+    format: date-time
+    description: "The date and time when the order was created."
+  dateUpdated:
+    type: string
+    format: date-time
+    description: "The date and time when the order was last updated."
