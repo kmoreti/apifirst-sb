@@ -1,0 +1,25 @@
+get: 
+  tags: 
+    -  Product
+  summary: Get a product by ID
+  description: Get a single product by its unique ID
+  operationId: getProductById
+  parameters:
+    - name: product_id
+      in: path
+      required: true
+      description: The unique identifier of the product
+      schema:
+        type: string
+        format: uuid
+  responses: 
+    200: 
+      description: A single product
+      content: 
+        application/json: 
+          schema:                          
+            $ref: ../../components/schemas/v1/product.yaml
+    '400':
+      description: Bad request
+    '404':
+      description: Product not found

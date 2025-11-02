@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: "The unique identifier for the customer."
+  addressLine11:
+    type: string
+    description: "The first line of the street address."
+  addressLine2:
+    type: string
+    description: "The second line of the street address."
+  city:
+    type: string
+    description: "The city of the address."
+  state:
+    type: string
+    description: "The state or province of the address."
+  zip:
+    type: string
+    description: "The postal code of the address."

@@ -1,0 +1,8 @@
+type: array
+items:
+  $ref: customer.yaml
+  description: "A list of customers."
+  example:
+    - id: 1
+      name: "John Doe"
+      email: "john.doe@email.com"

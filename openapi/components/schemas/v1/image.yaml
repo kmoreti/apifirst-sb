@@ -1,0 +1,21 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: "The unique identifier for the image."
+  url:
+    type: string
+    description: "The URL of the image." 
+    format: url
+  altText:
+    type: string
+    description: "The alternative text for the image."
+  dateCreated:
+    type: string
+    format: date-time
+    description: "The date and time when the image was created."
+  dateUpdated:
+    type: string
+    format: date-time
+    description: "The date and time when the image was last updated."
