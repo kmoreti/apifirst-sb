@@ -4,7 +4,7 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for the customer."
-  addressLine11:
+  addressLine1:
     type: string
     description: "The first line of the street address."
   addressLine2:
@@ -19,3 +19,8 @@ properties:
   zip:
     type: string
     description: "The postal code of the address."
+required:
+  - addressLine1
+  - city
+  - state
+  - zip

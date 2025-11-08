@@ -12,3 +12,6 @@ properties:
   suffix:
     type: string
     description: Name Suffix
+required:
+  - firstName
+  - lastName
