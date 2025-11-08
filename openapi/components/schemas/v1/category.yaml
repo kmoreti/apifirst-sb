@@ -3,18 +3,30 @@ properties:
   id:
     type: string
     format: uuid
-    description: "The unique identifier for the category."
+    description: The unique identifier for the category.
+    readOnly: true
   category:
     type: string
-    description: "The category of the product"
+    description: The category of the product
+    minLength: 3
+    maxLength: 25
+    example: Electronics
   description:
     type: string
-    description: "The description of the category."
+    description: The description of the category.
+    minLength: 3
+    maxLength: 255
+    example: Devices and gadgets including phones, laptops, and accessories.
   dateCreated:
     type: string
     format: date-time
-    description: "The date and time when the category was created."
+    description: The date and time when the category was created.
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
-    description: "The date and time when the category was last updated."
+    description: The date and time when the category was last updated.
+    readOnly: true
+required:
+  - category
+  - description

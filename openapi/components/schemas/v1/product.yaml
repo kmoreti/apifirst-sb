@@ -4,9 +4,12 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for the product."
+    readOnly: true
   description:
     type: string
     description: "The description of the product."
+    minLength: 10
+    maxLength: 255
   dimensions:
     $ref: dimensions.yaml
   categories:
@@ -27,7 +30,13 @@ properties:
     type: string
     format: date-time
     description: "The date and time when the product was created."
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
     description: "The date and time when the product was last updated."
+    readOnly: true
+required:
+  - description
+  - price
+  - cost

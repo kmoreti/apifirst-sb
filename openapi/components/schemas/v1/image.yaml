@@ -3,19 +3,31 @@ properties:
   id:
     type: string
     format: uuid
-    description: "The unique identifier for the image."
+    description: The unique identifier for the image.
+    readOnly: true
   url:
     type: string
-    description: "The URL of the image." 
+    description: The URL of the image. 
     format: url
+    minLength: 5
+    maxLength: 500
+    example: https://example.com/wp-content/uploads/2019/08/image.jpg
   altText:
-    type: string
-    description: "The alternative text for the image."
+    type:
+      - string
+      - 'null'
+    minLength: 3
+    maxLength: 255
+    description: The alternative text for the image.
   dateCreated:
     type: string
     format: date-time
-    description: "The date and time when the image was created."
+    description: The date and time when the image was created.
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
-    description: "The date and time when the image was last updated."
+    description: The date and time when the image was last updated.
+    readOnly: true
+required:
+  - url
