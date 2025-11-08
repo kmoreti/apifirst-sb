@@ -3,19 +3,23 @@ properties:
   id:
     type: string
     format: uuid
-    description: "The unique identifier for the payment method."
+    description: The unique identifier for the payment method.
   displayName:
     type: string
     minLength: 2
     maxLength: 100
+    example: My Chase Card
   cardNumber:
     type: integer
   expiryMonth:
     type: integer
+    example: 7
   expiryYear:
     type: integer
+    example: 26
   cvv:
     type: integer
+    example: 123
   dateCreated:
     type: string
     format: date-time
