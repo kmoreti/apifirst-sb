@@ -29,3 +29,8 @@ properties:
     description: "The postal code of the address."
     minLength: 5
     maxLength: 10
+required:
+  - addressLine1
+  - city
+  - state
+  - zip
