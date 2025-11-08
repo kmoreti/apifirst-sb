@@ -3,8 +3,11 @@ properties:
   id:
     type: string
     format: uuid
+    description: "The unique identifier for the payment method."
   displayName:
     type: string
+    minLength: 2
+    maxLength: 100
   cardNumber:
     type: integer
   expiryMonth:

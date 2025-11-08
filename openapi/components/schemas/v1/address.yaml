@@ -7,18 +7,28 @@ properties:
   addressLine1:
     type: string
     description: "The first line of the street address."
+    minLength: 3
+    maxLength: 100
   addressLine2:
     type: string
     description: "The second line of the street address."
+    minLength: 3
+    maxLength: 100
   city:
     type: string
     description: "The city of the address."
+    minLength: 2
+    maxLength: 100
   state:
     type: string
     description: "The state or province of the address."
+    minLength: 2
+    maxLength: 2
   zip:
     type: string
     description: "The postal code of the address."
+    minLength: 5
+    maxLength: 10
 required:
   - addressLine1
   - city
