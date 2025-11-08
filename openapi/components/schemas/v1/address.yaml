@@ -3,32 +3,36 @@ properties:
   id:
     type: string
     format: uuid
-    description: "The unique identifier for the customer."
+    description: The unique identifier for the customer.
   addressLine1:
     type: string
-    description: "The first line of the street address."
+    description: The first line of the street address.
     minLength: 3
     maxLength: 100
+    example: 123 Main St
   addressLine2:
     type: string
-    description: "The second line of the street address."
+    description: The second line of the street address.
     minLength: 3
     maxLength: 100
   city:
     type: string
-    description: "The city of the address."
+    description: The city of the address.
     minLength: 2
     maxLength: 100
+    example: St Petersburg
   state:
     type: string
-    description: "The state or province of the address."
+    description: The state or province of the address.
     minLength: 2
     maxLength: 2
+    example: FL
   zip:
     type: string
-    description: "The postal code of the address."
+    description: The postal code of the address.
     minLength: 5
     maxLength: 10
+    example: 33701
 required:
   - addressLine1
   - city
