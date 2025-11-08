@@ -27,15 +27,9 @@ properties:
     type: string
     pattern: ^-?(?:0|[0-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
   dateCreated:
-    type: string
-    format: date-time
-    description: "The date and time when the product was created."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: "The date and time when the product was last updated."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
 required:
   - description
   - price

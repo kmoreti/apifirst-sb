@@ -20,14 +20,8 @@ properties:
     maxLength: 255
     description: The alternative text for the image.
   dateCreated:
-    type: string
-    format: date-time
-    description: The date and time when the image was created.
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: The date and time when the image was last updated.
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
 required:
   - url

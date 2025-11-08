@@ -22,15 +22,9 @@ properties:
     items:
       $ref: order_line.yaml
   dateCreated:
-    type: string
-    format: date-time
-    description: "The date and time when the order was created."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: "The date and time when the order was last updated."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
 required:
   - customer
   - orderStatus

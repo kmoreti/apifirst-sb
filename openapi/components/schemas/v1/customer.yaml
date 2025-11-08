@@ -29,15 +29,9 @@ properties:
     items: 
       $ref: payment_method.yaml
   dateCreated:
-    type: string
-    format: date-time
-    description: "The date and time when the customer was created."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: "The date and time when the customer was last updated."
-    readOnly: true
+    $ref: ../commons/iso_timestamp.yaml
 required:
   - name
   - shipToAddress

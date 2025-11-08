@@ -36,6 +36,10 @@ properties:
     minLength: 5
     maxLength: 10
     example: "33701"
+  dateCreated:
+    $ref: ../commons/iso_timestamp.yaml
+  dateUpdated:
+    $ref: ../commons/iso_timestamp.yaml
 required:
   - addressLine1
   - city
