@@ -3,7 +3,8 @@ properties:
   id:
     type: string
     format: uuid
-    description: "The unique identifier for the customer."    
+    description: "The unique identifier for the customer."
+    readOnly: true
   name:
     $ref: name.yaml
   shipToAddress:
