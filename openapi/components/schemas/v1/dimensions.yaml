@@ -3,10 +3,23 @@ properties:
   length:
     type: number
     description: "The length dimension."
+    minimum: 1
+    maximum: 999
+    example: 10
   width:
     type: number
     description: "The width dimension."
+    minimum: 1
+    maximum: 999
+    example: 10
   height:
     type: number
     description: "The height dimension."
+    minimum: 1
+    maximum: 999
+    example: 10
 description: "The dimensions of the product."
+required:
+  - length
+  - width
+  - height

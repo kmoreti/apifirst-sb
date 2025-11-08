@@ -4,9 +4,12 @@ properties:
     type: string
     format: uuid
     description: "The unique identifier for the product."
+    readOnly: true
   description:
     type: string
     description: "The description of the product."
+    minLength: 10
+    maxLength: 255
   dimensions:
     $ref: dimensions.yaml
   categories:
@@ -24,10 +27,10 @@ properties:
     type: string
     pattern: ^-?(?:0|[0-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
   dateCreated:
-    type: string
-    format: date-time
-    description: "The date and time when the product was created."
+    $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: "The date and time when the product was last updated."
+    $ref: ../commons/iso_timestamp.yaml
+required:
+  - description
+  - price
+  - cost
