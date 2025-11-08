@@ -11,8 +11,8 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
-    altText: OpenAPI example logo
+    url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FSport_Club_Corinthians_Paulista&psig=AOvVaw0tdld34FVtW-WxtVjLy8rl&ust=1762705590404000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjjtpb84pADFQAAAAAdAAAAABAE'
+    altText: Corinthians Logo
   description: >
     This is an **example** API to demonstrate features of the OpenAPI
     specification.
@@ -24,11 +24,6 @@ tags:
  - name: Order
    description: Order operations
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
   - url: https://springframework.guru/api/v1
 paths:
   '/v1/customers':

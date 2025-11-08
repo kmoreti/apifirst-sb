@@ -4,6 +4,7 @@ properties:
     type: string
     format: uuid
     description: The unique identifier for the payment method.
+    readOnly: true
   displayName:
     type: string
     minLength: 2
@@ -23,6 +24,14 @@ properties:
   dateCreated:
     type: string
     format: date-time
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
+    readOnly: true
+required:
+  - displayName
+  - cardNumber
+  - expiryMonth
+  - expiryYear
+  - cvv
