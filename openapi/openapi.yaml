@@ -24,11 +24,6 @@ tags:
  - name: Order
    description: Order operations
 servers:
-  - url: https://{tenant}/api/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
   - url: https://springframework.guru/api/v1
 paths:
   '/v1/customers':

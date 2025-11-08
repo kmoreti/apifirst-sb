@@ -4,6 +4,7 @@ properties:
     type: string
     format: uuid
     description: The unique identifier for the customer.
+    readOnly: true
   addressLine1:
     type: string
     description: The first line of the street address.
@@ -11,7 +12,9 @@ properties:
     maxLength: 100
     example: 123 Main St
   addressLine2:
-    type: string
+    type: 
+      - string
+      - 'null'
     description: The second line of the street address.
     minLength: 3
     maxLength: 100
@@ -32,7 +35,7 @@ properties:
     description: The postal code of the address.
     minLength: 5
     maxLength: 10
-    example: 33701
+    example: "33701"
 required:
   - addressLine1
   - city
