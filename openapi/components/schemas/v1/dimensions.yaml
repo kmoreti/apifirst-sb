@@ -1,19 +1,19 @@
 type: object
 properties:
   length:
-    type: number
+    type: integer
     description: "The length dimension."
     minimum: 1
     maximum: 999
     example: 10
   width:
-    type: number
+    type: integer
     description: "The width dimension."
     minimum: 1
     maximum: 999
     example: 10
   height:
-    type: number
+    type: integer
     description: "The height dimension."
     minimum: 1
     maximum: 999
