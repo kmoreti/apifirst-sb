@@ -11,7 +11,9 @@ get:
         application/json: 
           schema:                          
             $ref: ../../components/schemas/v1/order_list.yaml
-    '404':
+    400:
+      description: Bad request
+    404:
       description: No orders found
       content:
         application/json:
