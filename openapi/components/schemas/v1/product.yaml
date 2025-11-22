@@ -8,7 +8,7 @@ properties:
   description:
     type: string
     description: "The description of the product."
-    minLength: 10
+    minLength: 3
     maxLength: 255
   dimensions:
     $ref: dimensions.yaml
