@@ -13,12 +13,11 @@ properties:
     maxLength: 500
     example: https://example.com/wp-content/uploads/2019/08/image.jpg
   altText:
-    type:
-      - string
-      - 'null'
+    type: string
     minLength: 3
     maxLength: 255
     description: The alternative text for the image.
+    nullable: true
   dateCreated:
     $ref: ../commons/iso_timestamp.yaml
   dateUpdated:
