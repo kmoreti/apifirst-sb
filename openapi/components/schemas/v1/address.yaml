@@ -5,6 +5,7 @@ properties:
     format: uuid
     description: The unique identifier for the customer.
     readOnly: true
+    nullable: true
   addressLine1:
     type: string
     description: The first line of the street address.
